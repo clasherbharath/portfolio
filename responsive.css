@@ -1,0 +1,111 @@
+/* =============================================
+   RESPONSIVE STYLES — BHARATH PORTFOLIO
+   ============================================= */
+
+/* --- Large Desktops (>1400px) --- */
+@media (min-width: 1400px) {
+  .hero-name { font-size: 6rem; }
+  .hero-image-ring { width: 320px; height: 320px; }
+}
+
+/* --- Tablets & small laptops (900px–1199px) --- */
+@media (max-width: 1199px) {
+  .hero-content { grid-template-columns: 1fr; text-align: center; }
+  .hero-image-wrap { justify-self: center; order: -1; }
+  .hero-badge { margin: 0 auto 1.5rem; }
+  .hero-desc { margin: 0 auto 2.5rem; }
+  .hero-actions { justify-content: center; }
+  .hero-chip.c3 { display: none; }
+
+  .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .about-img-wrap { max-width: 360px; margin: 0 auto; }
+
+  .contact-wrapper { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+/* --- Tablet portrait (768px–899px) --- */
+@media (max-width: 899px) {
+  :root { --nav-height: 64px; }
+  section { padding: 72px 6%; }
+
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+
+  /* Mobile nav overlay */
+  .mobile-nav {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background: var(--glass);
+    backdrop-filter: blur(24px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .mobile-nav.open { opacity: 1; pointer-events: all; }
+  .mobile-nav a {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    transition: color 0.2s;
+  }
+  .mobile-nav a:hover { color: var(--accent-1); }
+
+  .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.active span:nth-child(2) { opacity: 0; }
+  .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .hero-image-ring { width: 220px; height: 220px; }
+  .hero-chip.c1 { display: none; }
+  .hero-chip.c2 { bottom: -10px; right: -10px; }
+
+  .skills-grid { grid-template-columns: 1fr 1fr; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .cert-grid { grid-template-columns: 1fr 1fr; }
+
+  .footer { flex-direction: column; text-align: center; }
+
+  .about-stats { grid-template-columns: repeat(2, 1fr); }
+  .personal-details { grid-template-columns: 1fr; }
+}
+
+/* --- Mobile (max 599px) --- */
+@media (max-width: 599px) {
+  section { padding: 60px 5%; }
+  .section-title { font-size: 1.8rem; }
+
+  .hero { padding: calc(var(--nav-height) + 40px) 5% 60px; }
+  .hero-name { font-size: 2.4rem; letter-spacing: -1px; }
+  .hero-image-ring { width: 180px; height: 180px; }
+  .hero-chip { display: none; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn { justify-content: center; }
+
+  .skills-grid { grid-template-columns: 1fr; }
+  .cert-grid { grid-template-columns: 1fr; }
+
+  .modal-info { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+  .modal-content { border-radius: var(--radius-md); }
+  .modal-overlay { padding: 1rem; }
+
+  .social-links { flex-wrap: wrap; }
+
+  .navbar { padding: 0 5%; }
+  .nav-actions { gap: 0.5rem; }
+}
+
+/* --- Reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.3s !important;
+  }
+  .hero-image-ring { animation: none; }
+  .scroll-indicator { animation: none; }
+}

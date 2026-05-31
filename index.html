@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bharath K — ECE Engineer & PCB Designer</title>
+  <meta name="description" content="Portfolio of Bharath K, Electronics and Computer Engineering student at Sona College of Technology. PCB Designer, Embedded Systems, Verilog.">
+  <meta name="keywords" content="Bharath K, ECE, PCB Design, Verilog, Embedded Systems, Sona College">
+  <meta property="og:title" content="Bharath K — ECE Engineer & PCB Designer">
+  <meta property="og:description" content="Portfolio of Bharath K, Electronics and Computer Engineering student.">
+  <meta property="og:type" content="website">
+
+  <!-- Preload critical assets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="assets/images/profile.jpg" as="image" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <style>
+    /* Cursor blink */
+    .cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1.1em;
+      background: var(--accent-1);
+      margin-left: 2px;
+      vertical-align: middle;
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+    /* Nav active */
+    .nav-links a.active { color: var(--accent-1); }
+    .nav-links a.active::after { transform: scaleX(1); }
+
+    /* Hero grid fix with mouse parallax */
+    .hero { --mx: 0px; --my: 0px; }
+    .hero::before { transform: translate(calc(var(--mx)*0.6), calc(var(--my)*0.6)); }
+    .hero::after  { transform: translate(calc(var(--mx)*-0.4), calc(var(--my)*-0.4)); }
+  </style>
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <a href="#home" class="nav-logo">BK.</a>
+
+  <ul class="nav-links" aria-label="Desktop navigation">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certificates">Certs</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle dark/light mode">🌙</button>
+    <button class="hamburger" id="hamburger" aria-label="Open mobile menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile nav overlay -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#certificates">Certificates</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="home" aria-label="Hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Available for opportunities
+      </div>
+
+      <h1 class="hero-name">
+        Hi, I'm <br><span class="accent">Bharath K</span>
+      </h1>
+
+      <p class="hero-role">
+        <strong><span id="typed-role"></span><span class="cursor" aria-hidden="true"></span></strong>
+      </p>
+
+      <p class="hero-desc">
+        II Year B.E. Electronics & Computer Engineering student at Sona College of Technology, Salem. Passionate about PCB design, embedded systems, and hardware innovation.
+      </p>
+
+      <div class="hero-actions">
+        <a href="assets/pdf/Bharath_Resume.pdf" download class="btn btn-primary">
+          ⬇ Download Resume
+        </a>
+        <a href="#projects" class="btn btn-ghost">
+          🚀 View Projects
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          ✉ Contact Me
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-image-wrap">
+      <div class="hero-image-ring">
+        <div class="hero-image-inner">
+          <img src="assets/images/profile.jpg" alt="Bharath K — Profile photo" loading="eager" />
+        </div>
+      </div>
+      <div class="hero-chip c1">📐 PCB Design</div>
+      <div class="hero-chip c2">⚡ Verilog HDL</div>
+      <div class="hero-chip c3">🔬 VLSI</div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="line"></div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" aria-label="About">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">About Me</span>
+      <h2 class="section-title">Driven by <span class="highlight">curiosity</span>,<br>powered by hardware</h2>
+      <p class="section-subtitle">A passionate engineering student with a love for electronics and innovation.</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-img-wrap fade-in">
+        <div class="about-img-card">
+          <img src="assets/images/profile.jpg" alt="Bharath K" loading="lazy" />
+        </div>
+        <div class="about-decoration"></div>
+      </div>
+
+      <div class="about-text">
+        <div class="about-stats stagger-children fade-in">
+          <div class="stat-card">
+            <div class="stat-num" data-target="2" data-suffix="+">2+</div>
+            <div class="stat-label">Certifications</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" data-target="8">8</div>
+            <div class="stat-label">CGPA (Current)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" data-target="3" data-suffix="+">3+</div>
+            <div class="stat-label">Projects</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" data-target="4" data-suffix=" Lang">4 Lang</div>
+            <div class="stat-label">Languages Known</div>
+          </div>
+        </div>
+
+        <p>I'm <strong>Bharath K</strong>, currently pursuing my B.E. in Electronics and Computer Engineering at <strong>Sona College of Technology, Salem</strong>. My career goal is to expand my expertise in PCB design and embedded systems while contributing meaningfully to innovative engineering solutions.</p>
+
+        <p>I'm a member of the Sona AICTE Lab and have actively participated in hackathons, workshops, and technical events. I believe in continuous learning — whether through online platforms, seminars on hardware design, or picking up new languages like Hindi as a daily habit.</p>
+
+        <p>Beyond engineering, I have a love for cricket, gaming, analyzing films, and exploring research topics that spark my curiosity.</p>
+
+        <div class="personal-details fade-in">
+          <div class="detail-item">
+            <span class="detail-label">Date of Birth</span>
+            <span class="detail-value">04 September 2006</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Nationality</span>
+            <span class="detail-value">Indian</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Location</span>
+            <span class="detail-value">Salem, Tamil Nadu</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Languages</span>
+            <span class="detail-value">Tamil, Telugu, English, Hindi</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Email</span>
+            <span class="detail-value">amkesaven525@gmail.com</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Phone</span>
+            <span class="detail-value">+91 8148907624</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EDUCATION ===================== -->
+<section id="education" style="background:var(--bg-panel);" aria-label="Education">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">Education</span>
+      <h2 class="section-title">Academic <span class="highlight">Journey</span></h2>
+      <p class="section-subtitle">Building a strong foundation in electronics and engineering.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-year">2023 – Present (Pursuing)</div>
+          <div class="timeline-title">B.E. Electronics and Computer Engineering</div>
+          <div class="timeline-institution">Sona College of Technology, Salem</div>
+          <span class="timeline-grade">⭐ 8.10 CGPA</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-year">2023</div>
+          <div class="timeline-title">Higher Secondary Certificate (HSC)</div>
+          <div class="timeline-institution">St. Paul's Higher Secondary School</div>
+          <span class="timeline-grade">📊 81.33%</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-year">2021</div>
+          <div class="timeline-title">Secondary School Leaving Certificate (SSLC)</div>
+          <div class="timeline-institution">St. Paul's Higher Secondary School</div>
+          <span class="timeline-grade">📊 62.8%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section id="skills" aria-label="Skills">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">Technical Skills</span>
+      <h2 class="section-title">Tools & <span class="highlight">Technologies</span></h2>
+      <p class="section-subtitle">A mix of hardware design and software programming skills.</p>
+    </div>
+
+    <div class="skills-grid stagger-children fade-in">
+      <div class="skill-category">
+        <span class="skill-cat-icon">🖥️</span>
+        <div class="skill-cat-title">Hardware Design</div>
+        <span class="skill-tag">PCB Design</span>
+        <span class="skill-tag">EDA Tools</span>
+        <span class="skill-tag">Schematic Design</span>
+        <span class="skill-tag">Circuit Analysis</span>
+        <span class="skill-tag">Green Computing</span>
+      </div>
+
+      <div class="skill-category">
+        <span class="skill-cat-icon">💻</span>
+        <div class="skill-cat-title">Programming Languages</div>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">C</span>
+        <span class="skill-tag">Verilog HDL</span>
+      </div>
+
+      <div class="skill-category">
+        <span class="skill-cat-icon">⚡</span>
+        <div class="skill-cat-title">VLSI & Digital Design</div>
+        <span class="skill-tag">Verilog Design</span>
+        <span class="skill-tag">VLSI Concepts</span>
+        <span class="skill-tag">Logic Design</span>
+        <span class="skill-tag">Digital Systems</span>
+      </div>
+
+      <div class="skill-category">
+        <span class="skill-cat-icon">🔧</span>
+        <div class="skill-cat-title">Embedded Systems</div>
+        <span class="skill-tag">Embedded C</span>
+        <span class="skill-tag">Microcontrollers</span>
+        <span class="skill-tag">Hardware Interfaces</span>
+        <span class="skill-tag">System Design</span>
+      </div>
+
+      <div class="skill-category">
+        <span class="skill-cat-icon">🧠</span>
+        <div class="skill-cat-title">Soft Skills</div>
+        <span class="skill-tag">Design Thinking</span>
+        <span class="skill-tag">Problem Solving</span>
+        <span class="skill-tag">Team Collaboration</span>
+        <span class="skill-tag">Continuous Learning</span>
+      </div>
+
+      <div class="skill-category">
+        <span class="skill-cat-icon">🌐</span>
+        <div class="skill-cat-title">Languages Spoken</div>
+        <span class="skill-tag">Tamil (Native)</span>
+        <span class="skill-tag">Telugu</span>
+        <span class="skill-tag">English</span>
+        <span class="skill-tag">Hindi (Learning)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section id="projects" style="background:var(--bg-panel);" aria-label="Projects">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">Projects</span>
+      <h2 class="section-title">Things I've <span class="highlight">Built</span></h2>
+      <p class="section-subtitle">Hands-on projects exploring hardware and software intersections.</p>
+    </div>
+
+    <div class="projects-grid stagger-children fade-in">
+      <div class="project-card">
+        <div class="project-number">01</div>
+        <div class="project-title">End-to-End PCB Design & Development</div>
+        <p class="project-desc">
+          Completed a comprehensive PCB design training program covering schematic capture, component placement, routing, DRC checks, and Gerber file generation for real-world manufacturing. Applied EDA tools to produce production-ready board layouts.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">PCB Design</span>
+          <span class="project-tag">EDA Tools</span>
+          <span class="project-tag">Hardware</span>
+          <span class="project-tag">Gerber Files</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-number">02</div>
+        <div class="project-title">Verilog HDL Digital Design Projects</div>
+        <p class="project-desc">
+          Designed and simulated digital circuits using Verilog HDL, including combinational and sequential logic systems. Gained hands-on experience with RTL design methodology, testbench development, and waveform analysis.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">Verilog HDL</span>
+          <span class="project-tag">RTL Design</span>
+          <span class="project-tag">Simulation</span>
+          <span class="project-tag">VLSI</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-number">03</div>
+        <div class="project-title">Hackathon & Workshop Participation</div>
+        <p class="project-desc">
+          Actively participated in multiple college-level hackathons and technical workshops, collaborating with peers to develop innovative engineering solutions. Member of Sona AICTE Lab, engaging with industry-grade tools and mentors.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">Hackathon</span>
+          <span class="project-tag">Innovation</span>
+          <span class="project-tag">AICTE Lab</span>
+          <span class="project-tag">Teamwork</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-number">04</div>
+        <div class="project-title">NPTEL Design Thinking — IIT Madras</div>
+        <p class="project-desc">
+          Completed the NPTEL Design Thinking: A Primer course offered by IIT Madras, gaining structured problem-solving frameworks, empathy mapping, ideation techniques, and prototyping skills applicable to engineering design challenges.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">Design Thinking</span>
+          <span class="project-tag">NPTEL</span>
+          <span class="project-tag">IIT Madras</span>
+          <span class="project-tag">Problem Solving</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CERTIFICATES ===================== -->
+<section id="certificates" aria-label="Certificates">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">Achievements</span>
+      <h2 class="section-title">Certificates & <span class="highlight">Recognitions</span></h2>
+      <p class="section-subtitle">Click any certificate to preview it in full detail.</p>
+    </div>
+
+    <div class="cert-grid stagger-children fade-in">
+      <!-- Certificate 1 -->
+      <div class="cert-card"
+           data-src="assets/images/certificate1.jpg"
+           data-title="Certificate of Participation — ElectroBlitz 2025"
+           tabindex="0"
+           role="button"
+           aria-label="View Certificate of Participation — ElectroBlitz 2025">
+        <div class="cert-img-wrap">
+          <img src="assets/images/certificate1.jpg" alt="ElectroBlitz 2025 Participation Certificate" loading="lazy" />
+          <div class="cert-overlay">🔍 Preview</div>
+        </div>
+        <div class="cert-info">
+          <div class="cert-title">ElectroBlitz 2025 — Participation</div>
+          <div class="cert-org">Sona College of Technology · Intra Dept Symposium</div>
+          <span class="cert-badge">24 October 2025</span>
+        </div>
+      </div>
+
+      <!-- Certificate 2 -->
+      <div class="cert-card"
+           data-src="assets/images/certificate2.jpg"
+           data-title="Certificate of Appreciation — EDA Tools Workshop"
+           tabindex="0"
+           role="button"
+           aria-label="View Certificate of Appreciation — EDA Tools Workshop">
+        <div class="cert-img-wrap">
+          <img src="assets/images/certificate2.jpg" alt="EDA Tools Workshop Appreciation Certificate" loading="lazy" />
+          <div class="cert-overlay">🔍 Preview</div>
+        </div>
+        <div class="cert-info">
+          <div class="cert-title">Workshop on EDA Tools — Appreciation</div>
+          <div class="cert-org">Sona College of Technology · IEEE</div>
+          <span class="cert-badge">24 October 2025</span>
+        </div>
+      </div>
+
+      <!-- Certificate 3 — Text card for NPTEL -->
+      <div class="cert-card"
+           data-src=""
+           data-title="NPTEL Design Thinking — IIT Madras"
+           tabindex="0"
+           role="button"
+           aria-label="NPTEL Design Thinking Certificate">
+        <div class="cert-img-wrap" style="background:var(--bg-dark);display:flex;align-items:center;justify-content:center;">
+          <div style="text-align:center;padding:2rem;">
+            <div style="font-size:3rem;margin-bottom:0.5rem;">🏆</div>
+            <div style="font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--accent-1);">NPTEL Certified</div>
+            <div style="font-size:0.8rem;color:var(--text-muted);margin-top:0.5rem;">IIT Madras</div>
+          </div>
+        </div>
+        <div class="cert-info">
+          <div class="cert-title">Design Thinking: A Primer</div>
+          <div class="cert-org">NPTEL — IIT Madras</div>
+          <span class="cert-badge">Completed</span>
+        </div>
+      </div>
+
+      <!-- Certificate 4 — Verilog HDL -->
+      <div class="cert-card"
+           data-src=""
+           data-title="Verilog HDL Certification"
+           tabindex="0"
+           role="button"
+           aria-label="Verilog HDL Certification">
+        <div class="cert-img-wrap" style="background:var(--bg-dark);display:flex;align-items:center;justify-content:center;">
+          <div style="text-align:center;padding:2rem;">
+            <div style="font-size:3rem;margin-bottom:0.5rem;">⚡</div>
+            <div style="font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--accent-2);">Verilog HDL</div>
+            <div style="font-size:0.8rem;color:var(--text-muted);margin-top:0.5rem;">Digital Design</div>
+          </div>
+        </div>
+        <div class="cert-info">
+          <div class="cert-title">Verilog HDL Certification</div>
+          <div class="cert-org">Technical Certification Program</div>
+          <span class="cert-badge">Completed</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" aria-label="Contact">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">Get In Touch</span>
+      <h2 class="section-title">Let's <span class="highlight">Connect</span></h2>
+      <p class="section-subtitle">Whether it's a project, opportunity, or just to say hi.</p>
+    </div>
+
+    <div class="contact-wrapper">
+      <div class="contact-info fade-in">
+        <h3>Ready to collaborate?</h3>
+        <p>I'm currently open to internship opportunities, project collaborations, and learning experiences in the field of PCB design, embedded systems, and VLSI. Feel free to reach out!</p>
+
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">
+              <a href="mailto:amkesaven525@gmail.com" style="color:inherit">amkesaven525@gmail.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">📱</div>
+          <div>
+            <div class="contact-label">Phone</div>
+            <div class="contact-value">
+              <a href="tel:+918148907624" style="color:inherit">+91 8148907624</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">Location</div>
+            <div class="contact-value">Salem, Tamil Nadu, India</div>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-btn github">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.026A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.295 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+            </svg>
+            GitHub
+          </a>
+          <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="social-btn linkedin">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            LinkedIn
+          </a>
+          <a href="assets/pdf/Bharath_Resume.pdf" download class="social-btn">
+            ⬇ Resume
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form fade-in fade-in-delay-2">
+        <form id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Bharath K" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Internship / Collaboration / Hello" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Hi Bharath, I'd love to connect about..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+            ✉ Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="footer-logo">BK.</div>
+  <p class="footer-copy">© 2025 Bharath K · Built with passion from Salem, Tamil Nadu</p>
+  <a href="#home" class="footer-back">↑ Back to top</a>
+</footer>
+
+<!-- ===================== MODAL ===================== -->
+<div class="modal-overlay" id="certModal" role="dialog" aria-modal="true" aria-label="Certificate preview">
+  <div class="modal-content">
+    <img class="modal-img" id="modalImg" src="" alt="Certificate preview" />
+    <div class="modal-info">
+      <div class="modal-title" id="modalTitle"></div>
+      <button class="modal-close" id="modalClose" aria-label="Close modal">✕</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/script.js" defer></script>
+</body>
+</html>
